@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Luckiest+Guy&family=Twinkle+Star&display=swap" rel="stylesheet">
+    <!-- Icon -->
+    <script src="https://kit.fontawesome.com/cb4485a197.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- my css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    
+    <title>Animal Flashcards</title>
+</head>
+<body>
+    
+    <!-- Title -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 justify-content-center py-4">
+                <div class="title">
+                    <!-- <img src="https://see.fontimg.com/api/renderfont4/d9VDV/eyJyIjoiZnMiLCJoIjo2NCwidyI6MTI1MCwiZnMiOjUxLCJmZ2MiOiIjNTlDRDFBIiwiYmdjIjoiI0VBRTBFOCIsInQiOjF9/QW5pbWFscyBGbGFzaGNhcmRz/palmsprings-personal-use-regular.png" alt="title"> -->
+                    <img src="https://see.fontimg.com/api/renderfont4/d9VDV/eyJyIjoiZnMiLCJoIjo2NCwidyI6MTI1MCwiZnMiOjUxLCJmZ2MiOiIjNTlDRDFBIiwiYmdjIjoiI0VBRTBFOCIsInQiOjF9/QW5pbWFscw/palmsprings-personal-use-regular.png" alt="title">
+                </div>
+            </div>
+        </div>
+    
+    <!-- Card -->
+        <div class="row p-2 justify-content-center main-row">              
+            <div class="col-md-6 col-12">  
+                <div class="scene scene--card">
+                    <div class="card">
+                        <div class="card__face card__face--front">
+                            <div class="name"></div>
+                            <div class="phonetic"></div>
+                        </div>
+                        <div class="card__face card__face--back">
+                            <div class="row">
+                                <div class="col-4 offset-1 name-vie">
+                                    <span class="text"></span>
+                                </div>
+                                <div class="col-6 card__img-wrapper">
+                                    <img class="card__img img-fluid" src="" alt="" width="100%" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-12">   
+                <div class="instruction"><i class="fa fa-hand-o-up"></i>Nhấn vào thẻ để lật lại<i class="fa fa-hand-o-up"></i></div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-5 col-12 text-center"> 
+                <button class="icon audio-btn" onclick="playSound()" alt="hehe"><i class="fa fa-volume-up speaker"></i></button>
+                <button class="icon" id="heart"><i class="fa-solid fa-heart"></i></button>
+                <button class="icon"><i class="fa fa-share-alt"></i></button>
+                <button class="btn btn-success change-card" style="border: none">ĐỔI THẺ KHÁC</button>
+            </div>
+        </div>
+        <audio src="" id="speak"></audio>
+    </div>
+
+    <script src="./js/cardData.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
