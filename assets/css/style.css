@@ -16,6 +16,23 @@ body {
     background-size: cover;
 }
 
+.loginBtn {
+    font-size: 0.9rem;
+    position: fixed;
+    top: 6%;
+    right: 10%;
+    color: green;
+    text-decoration: underline;
+  }
+  
+  .loginBtn:hover {
+    color: black;
+  }
+  
+  #loginForm * {
+    font-size: 1rem !important;
+  }
+
 .main-row {
     margin-top: 4rem;
 }
