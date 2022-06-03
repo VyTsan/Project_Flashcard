@@ -51,11 +51,6 @@ function checkImg(card) {
     return true;
 }
 
-// function showImg(card) {
-//     cardImg.setAttribute('src', card.imgURL);
-//     cardImg.setAttribute('alt', card.nameEng);
-// }
-
 function showCard(indexCard) {
     let card = cards[indexCard];
     // console.log(card);
