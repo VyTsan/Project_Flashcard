@@ -77,7 +77,7 @@
     <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#loginForm">
         Đăng nhập
       </button> -->
-      <a href="#loginForm" data-bs-toggle="modal" data-bs-target="#loginForm" class="loginBtn">Đăng nhập</a>
+      <a href="#loginForm" data-bs-toggle="modal" data-bs-target="#loginForm" id="loginBtn">Đăng nhập</a>
       
       <!-- Modal Form -->
       <div class="modal fade" id="loginForm" tabindex="-1" aria-hidden="true">
@@ -91,13 +91,13 @@
                 </div>
                 <div class="modal-body">
                   <div class="mb-3">
-                      <label for="Username">Tên đăng nhập<span class="text-danger">*</span></label>
-                      <input type="text" name="username" class="form-control" id="Username" placeholder="Điền tên đăng nhập...">
+                      <label for="Username">Email<span class="text-danger">*</span></label>
+                      <input type="text" name="username" class="form-control" id="Username" placeholder="Nhập email...">
                   </div>
       
                   <div class="mb-3">
                       <label for="Password">Mật khẩu<span class="text-danger">*</span></label>
-                      <input type="password" name="password" class="form-control" id="Password" placeholder="Điền mật khẩu...">
+                      <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập mật khẩu...">
                   </div>
                   <div class="mb-3">
                       <input class="form-check-input" type="checkbox" value="" id="remember" required>
@@ -108,7 +108,48 @@
                 <div class="modal-footer pt-4">                  
                   <button type="button" class="btn btn-success mx-auto w-100">Đăng nhập</button>
                 </div>
-                <p class="text-center">Chưa có tài khoản? <a href="#">Đăng ký</a></p> 
+                <p class="text-center">Chưa có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#signupForm">Đăng ký</a></p> 
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIGNUP -->
+
+    <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#signupForm">
+        Đăng ký
+      </button> -->
+      <a href="#signupForm" data-bs-toggle="modal" data-bs-target="#signupForm" id="signupBtn">Đăng ký</a>
+      
+      <!-- Modal Form -->
+      <div class="modal fade" id="signupForm" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <!-- Login Form -->
+              <form action="">
+                <div class="modal-header">
+                  <h5 class="modal-title">Đăng ký</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3">
+                      <label for="Username">Email<span class="text-danger">*</span></label>
+                      <input type="text" name="username" class="form-control" id="Username" placeholder="Nhập email...">
+                  </div>
+      
+                  <div class="mb-3">
+                      <label for="Password">Mật khẩu<span class="text-danger">*</span></label>
+                      <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập mật khẩu...">
+                  </div>
+                  <div class="mb-3">
+                      <label for="Password">Nhập lại mật khẩu<span class="text-danger">*</span></label>
+                      <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập lại mật khẩu...">
+                  </div>
+                </div>
+                <div class="modal-footer pt-4">                  
+                  <button type="button" class="btn btn-success mx-auto w-100">Đăng ký</button>
+                </div>
+                <p class="text-center">Đã có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#loginForm">Đăng nhập</a></p> 
             </form>
           </div>
         </div>

@@ -16,22 +16,30 @@ body {
     background-size: cover;
 }
 
-.loginBtn {
+#loginBtn, #signupBtn {
     font-size: 0.9rem;
     position: fixed;
-    top: 6%;
-    right: 10%;
     color: green;
     text-decoration: underline;
-  }
-  
-  .loginBtn:hover {
+}
+
+#loginBtn {
+    top: 6%;
+    right: 14%;
+}
+
+#signupBtn {
+    top: 6%;
+    right: 8%;
+}
+
+#loginBtn:hover, #signupBtn:hover {
     color: black;
-  }
-  
-  #loginForm * {
+}
+
+#loginForm *, #signupForm * {
     font-size: 1rem !important;
-  }
+}
 
 .main-row {
     margin-top: 4rem;
