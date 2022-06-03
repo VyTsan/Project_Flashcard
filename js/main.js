@@ -17,6 +17,27 @@ function setImgURL(card, fileExtension = 'jpg') {
     // console.log(card, fileExtension);
 }
 
+function showImg(card) {
+    setImgURL(card);
+    let img = new Image();
+    img.onload = function() {
+        if (this.width > 0) 
+        {
+            console.log("img exists", img.src);
+            img.alt = card.nameEng;
+        }
+    }
+    
+    img.onerror = function() {
+        setImgURL(card, 'jpeg')
+        img.src = card.imgURL;
+    }
+    
+    img.src = card.imgURL;
+    img.className = 'card__img img-fluid';
+    document.body.querySelector('.card__img-wrapper').appendChild(img);
+}
+
 function checkImg(card) {
     console.log([cardImg]);
     // console.log(cardImg.offsetHeight + 'px');
@@ -42,23 +63,26 @@ function showCard(indexCard) {
     cardNameVie.innerText = card.nameVie;
     phoneticEle.innerText = card.phonetic;
     speakEle.setAttribute('src', card.audioURL);
-    cardImg.setAttribute('src', card.imgURL);
+    // cardImg.setAttribute('src', card.imgURL);
 
     if (!card.audioURL) 
         document.querySelector('.audio-btn').classList.add('btn-disabled');
     
-    setTimeout(() => {
-        // console.log(cardImg.offsetHeight + 'px');
-        if (!checkImg(card)) cardImg.setAttribute('src', card.imgURL);
-        cardImg.setAttribute('alt', card.nameEng);
-    }, 300);
+    showImg(card);
+    
+    // setTimeout(() => {
+    //     // console.log(cardImg.offsetHeight + 'px');
+    //     if (!checkImg(card)) cardImg.setAttribute('src', card.imgURL);
+    //     cardImg.setAttribute('alt', card.nameEng);
+    // }, 300);
 }
 
 function resetCard() {
     cardNameEng.innerText = '';
     cardNameVie.innerText = '';
-    cardImg.setAttribute('src', '');
-    cardImg.setAttribute('alt', '');
+    // cardImg.setAttribute('src', '');
+    // cardImg.setAttribute('alt', '');
+    document.querySelector('.card__img-wrapper').innerHTML = '';
     phoneticEle.innerText = '';
     speakEle.setAttribute('src', '');
     document.querySelector('.audio-btn').classList.remove('btn-disabled');
