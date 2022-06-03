@@ -56,11 +56,11 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <!-- <div class="row justify-content-center">
             <div class="col-md-4 col-12">   
                 <div class="instruction"><i class="fa fa-hand-o-up"></i>Nhấn vào thẻ để lật lại<i class="fa fa-hand-o-up"></i></div>
             </div>
-        </div>
+        </div> -->
         <div class="row justify-content-center">
             <div class="col-md-5 col-12 text-center"> 
                 <button class="icon audio-btn" onclick="playSound()" alt="hehe"><i class="fa fa-volume-up speaker"></i></button>
@@ -92,12 +92,12 @@
                 <div class="modal-body">
                   <div class="mb-3">
                       <label for="Username">Email<span class="text-danger">*</span></label>
-                      <input type="text" name="username" class="form-control" id="Username" placeholder="Nhập email...">
+                      <input type="email" name="username" class="form-control" id="Username" placeholder="Nhập email..." required>
                   </div>
       
                   <div class="mb-3">
                       <label for="Password">Mật khẩu<span class="text-danger">*</span></label>
-                      <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập mật khẩu...">
+                      <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập mật khẩu..." required>
                   </div>
                   <div class="mb-3">
                       <input class="form-check-input" type="checkbox" value="" id="remember" required>
@@ -106,7 +106,7 @@
                   </div>
                 </div>
                 <div class="modal-footer pt-4">                  
-                  <button type="button" class="btn btn-success mx-auto w-100">Đăng nhập</button>
+                  <button type="button submit" class="btn btn-success mx-auto w-100">Đăng nhập</button>
                 </div>
                 <p class="text-center">Chưa có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#signupForm">Đăng ký</a></p> 
             </form>
@@ -134,20 +134,20 @@
                 <div class="modal-body">
                   <div class="mb-3">
                       <label for="Username">Email<span class="text-danger">*</span></label>
-                      <input type="text" name="username" class="form-control" id="Username" placeholder="Nhập email...">
+                      <input type="email" name="username" class="form-control" id="Username" placeholder="Nhập email..." required>
                   </div>
       
                   <div class="mb-3">
                       <label for="Password">Mật khẩu<span class="text-danger">*</span></label>
-                      <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập mật khẩu...">
+                      <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập mật khẩu..." required>
                   </div>
                   <div class="mb-3">
                       <label for="Password">Nhập lại mật khẩu<span class="text-danger">*</span></label>
-                      <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập lại mật khẩu...">
+                      <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập lại mật khẩu..." required>
                   </div>
                 </div>
                 <div class="modal-footer pt-4">                  
-                  <button type="button" class="btn btn-success mx-auto w-100">Đăng ký</button>
+                  <button type="button submit" class="btn btn-success mx-auto w-100">Đăng ký</button>
                 </div>
                 <p class="text-center">Đã có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#loginForm">Đăng nhập</a></p> 
             </form>

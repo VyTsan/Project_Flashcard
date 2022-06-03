@@ -108,7 +108,7 @@ body {
     font-size: 2rem;
 }
 
-.instruction {
+/* .instruction {
     background-color: rgb(207, 233, 183, 0.5);
     color: black;
     padding: 5px 0px;
@@ -121,9 +121,10 @@ body {
 .fa-hand-o-up {
     padding: 0 5px;
     font-size: 0.7rem;
-}
+} */
 
 .icon {
+    margin: 5px 0px 20px;
     width: 3.2rem;
     background-color: rgb(207, 233, 183);
     color: black;
@@ -137,10 +138,11 @@ body {
 .icon:hover {
     color: brown;
     /* background-color: green;
-  color: white; */
+    color: white; */
 }
 
 .change-card {
+    transform: translateY(-8%);
     line-height: 2.5rem;
 }
 
