@@ -48,10 +48,10 @@ function showCard(indexCard) {
         document.querySelector('.audio-btn').classList.add('btn-disabled');
     
     setTimeout(() => {
-        // console.log(cardImg.offsetHeight + 'px');
+        console.log(cardImg.offsetHeight + 'px', card.imgURL);
         if (!checkImg(card)) cardImg.setAttribute('src', card.imgURL);
         cardImg.setAttribute('alt', card.nameEng);
-    }, 1000);
+    }, 300);
 }
 
 function resetCard() {
