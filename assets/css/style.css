@@ -18,19 +18,8 @@ body {
 
 #loginBtn, #signupBtn {
     font-size: 0.9rem;
-    position: fixed;
     color: green;
     text-decoration: underline;
-}
-
-#loginBtn {
-    top: 6%;
-    right: 14%;
-}
-
-#signupBtn {
-    top: 6%;
-    right: 8%;
 }
 
 #loginBtn:hover, #signupBtn:hover {
