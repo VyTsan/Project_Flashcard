@@ -183,3 +183,6 @@ function playSound() {
     let btn = document.querySelector('.audio-btn');
     if (!btn.classList.contains('btn-disabled')) speakEle.play();
 }
+
+
+// Update JS
