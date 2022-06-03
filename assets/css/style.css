@@ -37,7 +37,7 @@ body {
     color: black;
 }
 
-#loginForm *, #signupForm * {
+#loginForm *:not(.modal-header *), #signupForm *:not(.modal-header *) {
     font-size: 1rem !important;
 }
 
