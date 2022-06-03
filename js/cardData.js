@@ -202,7 +202,7 @@ var cards = [
     {
         id: 26,
         nameEng: 'deer',
-        nameVie: 'hươu',
+        nameVie: 'con hươu',
         imgURL: '',
         audioURL: '',
         phonetic: '',
@@ -320,80 +320,3 @@ var cards = [
         phonetic: '',
     },
 ];
-
-
-function setImgURL(card, fileExtension = 'jpg') {
-    // console.log(card, fileExtension);
-    let nameLink = card.nameEng.replace(' ', '_');
-    card.imgURL = `./assets/images/${nameLink}.${fileExtension}`;
-}
-
-const dictionaryAPI = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
-const phoneticEle = document.querySelector('.phonetic');
-const speakEle = document.getElementById('speak');
-var hasSrcAudio = true;
-
-
-function getCardsData(indexCard, resolve) {
-    let card = cards[indexCard];
-    let nameLink = card.nameEng.replace(' ', '%20');
-    fetch(`${dictionaryAPI}${nameLink}`)
-        .then(response => response.json())
-        .then(data => {
-            // console.log(`${dictionaryAPI}${nameLink}`);
-            // console.log(data);
-            let phoneticText = '', audioSrc = '';
-            if (data[0]?.phonetic) phoneticText = data[0].phonetic;
-            else 
-            {
-                for (let i = 0; i<data[0].phonetics.length; i++)
-                {
-                    // console.log(data[0].phonetics[i].text);
-                    if (data[0].phonetics[i]?.text) 
-                    {
-                        phoneticText = data[0].phonetics[i].text;
-                        break;
-                    }
-                }
-            }
-
-            for (let i = 0; i<data[0].phonetics.length; i++)
-            {
-                if (data[0].phonetics[i]?.audio) 
-                {
-                    // console.log(data[0].phonetics[i]?.audio);
-                    audioSrc = data[0].phonetics[i].audio;
-                    break;
-                }
-            }
-
-            card.phonetic = phoneticText;
-            card.audioURL = audioSrc;
-            // console.log(audioSrc, phoneticText);
-        })
-        .then(() => {
-            setImgURL(card);
-        })
-        .then(() => {
-            if (indexCard === cards.length-1) resolve();
-        })
-}
-
-let start = new Promise((resolve, reject) => {
-    for (let i = 0; i < cards.length; i++) 
-        getCardsData(i, resolve);
-})
-
-let numStart = 0;
-
-start  
-    .then(() => {
-        console.log(cards);
-        // let numStart = randNum();
-        console.log(numStart);
-        return numStart;
-    })
-    .then((numStart) => {
-        showCard(numStart);
-    });
-
