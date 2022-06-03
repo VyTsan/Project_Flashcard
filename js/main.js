@@ -51,7 +51,7 @@ function showCard(indexCard) {
         // console.log(cardImg.offsetHeight + 'px');
         if (!checkImg(card)) cardImg.setAttribute('src', card.imgURL);
         cardImg.setAttribute('alt', card.nameEng);
-    }, 300);
+    }, 1000);
 }
 
 function resetCard() {
