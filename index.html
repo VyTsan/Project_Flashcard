@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- my css -->
     <link rel="stylesheet" href="./assets/css/style.css">
     
@@ -22,18 +22,104 @@
 </head>
 <body>
     
-    <!-- Title -->
     <div class="container">
         <div class="row">
-            <div class="col-md-6 justify-content-center py-4">
+            <!-- Title -->
+            <div class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-center py-md-4 pt-3">               
                 <div class="title">
                     <!-- <img src="https://see.fontimg.com/api/renderfont4/d9VDV/eyJyIjoiZnMiLCJoIjo2NCwidyI6MTI1MCwiZnMiOjUxLCJmZ2MiOiIjNTlDRDFBIiwiYmdjIjoiI0VBRTBFOCIsInQiOjF9/QW5pbWFscyBGbGFzaGNhcmRz/palmsprings-personal-use-regular.png" alt="title"> -->
                     <img src="https://see.fontimg.com/api/renderfont4/d9VDV/eyJyIjoiZnMiLCJoIjo2NCwidyI6MTI1MCwiZnMiOjUxLCJmZ2MiOiIjNTlDRDFBIiwiYmdjIjoiI0VBRTBFOCIsInQiOjF9/QW5pbWFscw/palmsprings-personal-use-regular.png" alt="title">
                 </div>
             </div>
+
+            <!-- Login - Sign up -->
+            <div class="col-md-6 d-flex justify-content-end align-items-center gap-3 py-md-4">
+                <!-- LOGIN -->
+
+                <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#loginForm">
+                Đăng nhập
+                </button> -->
+                <a href="#loginForm" data-bs-toggle="modal" data-bs-target="#loginForm" id="loginBtn">Đăng nhập</a>
+                
+                <!-- Modal Form -->
+                <div class="modal fade" id="loginForm" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <!-- Login Form -->
+                        <form action="">
+                            <div class="modal-header">
+                            <h5 class="modal-title">Đăng nhập</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="Username">Email <span class="text-danger">*</span></label>
+                                <input type="email" name="username" class="form-control" id="Username" placeholder="Nhập email..." required>
+                            </div>
+                
+                            <div class="mb-3">
+                                <label for="Password">Mật khẩu <span class="text-danger">*</span></label>
+                                <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập mật khẩu..." required>
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                                <label class="form-check-label" for="remember">Nhớ mật khẩu</label>
+                                <a href="#" class="float-end">Quên mật khẩu?</a>
+                            </div>
+                            </div>
+                            <div class="modal-footer pt-4">                  
+                            <button type="button submit" class="btn btn-success mx-auto w-100">Đăng nhập</button>
+                            </div>
+                            <p class="text-center log">Chưa có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#signupForm">Đăng ký</a></p> 
+                        </form>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- SIGNUP -->
+
+                <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#signupForm">
+                    Đăng ký
+                </button> -->
+                <a href="#signupForm" data-bs-toggle="modal" data-bs-target="#signupForm" id="signupBtn">Đăng ký</a>
+                
+                <!-- Modal Form -->
+                <div class="modal fade" id="signupForm" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <!-- Login Form -->
+                        <form action="">
+                            <div class="modal-header">
+                            <h5 class="modal-title">Đăng ký</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="Username">Email <span class="text-danger">*</span></label>
+                                <input type="email" name="username" class="form-control" id="Username" placeholder="Nhập email..." required>
+                            </div>
+                
+                            <div class="mb-3">
+                                <label for="Password">Mật khẩu <span class="text-danger">*</span></label>
+                                <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập mật khẩu..." required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Password">Nhập lại mật khẩu <span class="text-danger">*</span></label>
+                                <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập lại mật khẩu..." required>
+                            </div>
+                            </div>
+                            <div class="modal-footer pt-4">                  
+                            <button type="button submit" class="btn btn-success mx-auto w-100">Đăng ký</button>
+                            </div>
+                            <p class="text-center log">Đã có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#loginForm">Đăng nhập</a></p> 
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     
-    <!-- Card -->
+        <!-- Card -->
         <div class="row p-2 justify-content-center main-row">              
             <div class="col-md-6 col-12">  
                 <div class="scene scene--card">
@@ -86,6 +172,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./js/cardData.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/main.js"></script>
