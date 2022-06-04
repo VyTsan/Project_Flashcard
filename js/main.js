@@ -20,6 +20,7 @@ function setImgURL(card, fileExtension = 'jpg') {
 function showImg(card) {
     setImgURL(card);
     let img = new Image();
+    img.src = card.imgURL;  
     img.onload = function() {
         if (this.width > 0) 
         {
@@ -33,7 +34,6 @@ function showImg(card) {
         img.src = card.imgURL;
     }
     
-    img.src = card.imgURL;
     img.className = 'card__img img-fluid';
     document.body.querySelector('.card__img-wrapper').appendChild(img);
 }
