@@ -1,11 +1,17 @@
 const cardEle = document.querySelector('.card');
 const heartEle = document.querySelector('#heart');
+
+const signupModal = new bootstrap.Modal(document.querySelector('#signupModal'));
 const signupFormEle = document.querySelector('#signupForm');
 const usernameSignupEle = document.querySelector('#UsernameSignup');
 const passwordSignupEle = document.querySelector('#PasswordSignup');
 const passwordRepeatEle = document.querySelector('#PasswordRepeat');
-const signupModal = new bootstrap.Modal(document.querySelector('#signupModal'));
+
 const loginModal = new bootstrap.Modal(document.querySelector('#loginModal'));
+const loginFormEle = document.querySelector('#loginForm');
+const usernameLoginEle = document.querySelector('#UsernameLogin');
+const passwordLoginEle = document.querySelector('#PasswordLogin');
+
 const successModal = new bootstrap.Modal(document.querySelector('#successModal'));
 const failModal = new bootstrap.Modal(document.querySelector('#failModal'));
 const failMessageEle = document.querySelector('#failMessage');
@@ -18,14 +24,29 @@ if (check) {
   var account = [];
 }
 
-cardEle.addEventListener('click', () => {
-  cardEle.classList.toggle('is-flipped');
-});
+//Check if username exists
+function usernameExist(newUsername) {
+  if (account !== null) {
+    for (let i = 0; i < account.length; i++) {
+      if (account[i].username === newUsername) return true;
+    }
+    return false;
+  } else {
+    return false;
+  }
+}
 
-heartEle.addEventListener('click', () => {
-  heartEle.classList.toggle('liked');
-})
+//Check login
+function loginOK(inputUsername, inputpassword) {
+  for (let i = 0; i < account.length; i++) {
+    if (account[i].username === inputUsername && account[i].password === inputpassword) {
+      return true;
+    }
+  }
+  return false;
+}
 
+//Sign up JS
 signupFormEle.addEventListener('submit', (e) => {
 
   e.preventDefault();
@@ -55,16 +76,37 @@ signupFormEle.addEventListener('submit', (e) => {
   
 })
 
-function usernameExist(newUsername) {
+//Login JS
+loginFormEle.addEventListener('submit', (e) => {
+
+  e.preventDefault();
+
   if (account !== null) {
-    for (let i = 0; i < account.length; i++) {
-      if (account[i].username === newUsername)
-      {
-        return true;
-      }
+    if (loginOK(usernameLoginEle.value,passwordLoginEle.value)) {
+      successModal.show();
+      loginModal.hide();
+    } else {
+      failMessageEle.innerText = 'Nhập sai email hoặc mật khẩu.';
+      failModal.show();
+      loginModal.show();
     }
-    return false;
   } else {
-    return false;
+    failMessageEle.innerText = 'Nhập sai email hoặc mật khẩu.';
+    failModal.show();
+    loginModal.show();
   }
-}
+
+  usernameLoginEle.value = '';
+  passwordLoginEle.value = '';
+
+});
+
+// Card JS
+cardEle.addEventListener('click', () => {
+  cardEle.classList.toggle('is-flipped');
+});
+// Heart JS
+heartEle.addEventListener('click', () => {
+  heartEle.classList.toggle('liked');
+})
+
