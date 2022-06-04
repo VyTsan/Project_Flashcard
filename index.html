@@ -36,13 +36,13 @@
             <div class="col-md-6 d-flex justify-content-end align-items-center gap-3 py-md-4">
                 <!-- LOGIN -->
 
-                <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#loginForm">
+                <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#loginModal">
                 Đăng nhập
                 </button> -->
-                <a href="#loginForm" data-bs-toggle="modal" data-bs-target="#loginForm" id="loginBtn">Đăng nhập</a>
+                <a href="#loginModal" data-bs-toggle="modal" data-bs-target="#loginModal" id="loginBtn">Đăng nhập</a>
                 
-                <!-- Modal Form -->
-                <div class="modal fade" id="loginForm" tabindex="-1" aria-hidden="true">
+                <!-- Login Modal -->
+                <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <!-- Login Form -->
@@ -70,7 +70,7 @@
                             <div class="modal-footer pt-4">                  
                             <button type="button submit" class="btn btn-success mx-auto w-100">Đăng nhập</button>
                             </div>
-                            <p class="text-center log">Chưa có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#signupForm">Đăng ký</a></p> 
+                            <p class="text-center log">Chưa có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#signupModal">Đăng ký</a></p> 
                         </form>
                     </div>
                     </div>
@@ -78,17 +78,17 @@
 
                 <!-- SIGNUP -->
 
-                <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#signupForm">
+                <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#signupModal">
                     Đăng ký
                 </button> -->
-                <a href="#signupForm" data-bs-toggle="modal" data-bs-target="#signupForm" id="signupBtn">Đăng ký</a>
+                <a href="#signupModal" data-bs-toggle="modal" data-bs-target="#signupModal" id="signupBtn">Đăng ký</a>
                 
-                <!-- Modal Form -->
-                <div class="modal fade" id="signupForm" tabindex="-1" aria-hidden="true">
+                <!-- Signup Modal -->
+                <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                        <!-- Login Form -->
-                        <form action="">
+                        <!-- Signup Form -->
+                        <form id="signupForm" action="">
                             <div class="modal-header">
                             <h5 class="modal-title">Đăng ký</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -111,9 +111,51 @@
                             <div class="modal-footer pt-4">                  
                             <button type="button submit" class="btn btn-success mx-auto w-100">Đăng ký</button>
                             </div>
-                            <p class="text-center log">Đã có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#loginForm">Đăng nhập</a></p> 
+                            <p class="text-center log">Đã có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#loginModal">Đăng nhập</a></p> 
                         </form>
                     </div>
+                    </div>
+                </div>
+
+                <!-- Success Modal -->
+                <div class="modal" id="successModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                  
+                        <div class="modal-header">
+                          <h4 class="modal-title">Thành công!</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                  
+                        <div class="modal-body">
+                          Đăng nhập/Đăng ký thành công.
+                        </div>
+                  
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Đóng</button>
+                        </div>
+                  
+                      </div>
+                    </div>
+                </div>
+
+                <!-- Fail Modal -->
+                <div class="modal fade" id="failModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                  
+                        <div class="modal-header">
+                          <h4 class="modal-title">Thất bại!</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                  
+                        <div id="failMessage" class="modal-body"></div>
+                  
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                        </div>
+                  
+                      </div>
                     </div>
                 </div>
             </div>
