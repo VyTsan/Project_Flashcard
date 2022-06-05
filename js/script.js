@@ -16,6 +16,22 @@ const successModal = new bootstrap.Modal(document.querySelector('#successModal')
 const failModal = new bootstrap.Modal(document.querySelector('#failModal'));
 const failMessageEle = document.querySelector('#failMessage');
 
+const loginBtnEle = document.querySelector('#loginBtn');
+const signupBtnEle = document.querySelector('#signupBtn');
+const logoutBtnEle = document.querySelector('#logoutBtn');
+const logoutConfirmEle = document.querySelector('#logoutConfirmBtn');
+
+const welcomeEle = document.querySelector('#welcomeMessage');
+var user = 'bạn';
+
+
+let checkLoginStatus = localStorage.getItem('loggedIn');
+if (checkLoginStatus === null) {
+  localStorage.setItem('loggedIn','false');
+} else {
+  var loginStatus = JSON.parse(checkLoginStatus);
+}
+
 let check = localStorage.getItem('allAccount');
 if (check) {
   var account = JSON.parse(check);
@@ -39,12 +55,33 @@ function usernameExist(newUsername) {
 //Check login
 function loginOK(inputUsername, inputpassword) {
   for (let i = 0; i < account.length; i++) {
-    if (account[i].username === inputUsername && account[i].password === inputpassword) {
-      return true;
+    if (account[i].username === inputUsername) { 
+      if (account[i].password === inputpassword) {
+        return true;
+      } else {
+        return false;
+      }
     }
   }
   return false;
 }
+
+function beforeAfterLogin() {
+  localStorage.setItem('loggedIn',JSON.stringify(loginStatus));
+  if (loginStatus) {
+    loginBtnEle.style.display = 'none';
+    signupBtnEle.style.display = 'none';
+    logoutBtnEle.style.display = 'block';
+    welcomeEle.innerText = `Xin chào, ${user}`;
+    welcomeEle.style.display = 'block';
+  } else {
+    loginBtnEle.style.display = 'block';
+    signupBtnEle.style.display = 'block';
+    logoutBtnEle.style.display = 'none';
+    welcomeEle.style.display = 'none';
+  }
+}
+beforeAfterLogin();
 
 //Sign up JS
 signupFormEle.addEventListener('submit', (e) => {
@@ -83,9 +120,14 @@ loginFormEle.addEventListener('submit', (e) => {
 
   if (account !== null) {
     if (loginOK(usernameLoginEle.value,passwordLoginEle.value)) {
+      //Successfully logged in
+      user = usernameLoginEle.value.split('@')[0];
       successModal.show();
       loginModal.hide();
+      loginStatus = true;
+      beforeAfterLogin();
     } else {
+    //Login fail
       failMessageEle.innerText = 'Nhập sai email hoặc mật khẩu.';
       failModal.show();
       loginModal.show();
@@ -100,6 +142,12 @@ loginFormEle.addEventListener('submit', (e) => {
   passwordLoginEle.value = '';
 
 });
+
+//Logout JS
+logoutConfirmEle.addEventListener('click', () => {
+  loginStatus = false;
+  beforeAfterLogin();
+})
 
 // Card JS
 cardEle.addEventListener('click', () => {

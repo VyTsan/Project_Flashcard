@@ -16,17 +16,22 @@ body {
     background-size: cover;
 }
 
-#loginBtn, #signupBtn {
+#loginBtn, #signupBtn, #logoutBtn {
     font-size: 0.9rem;
     color: green;
     text-decoration: underline;
 }
 
-#loginBtn:hover, #signupBtn:hover {
+#loginBtn:hover, #signupBtn:hover, #logoutBtn:hover {
     color: black;
 }
 
-#loginModal *:not(.modal-header *), #signupModal *:not(.modal-header *), #successModal *:not(.modal-header *), #failModal *:not(.modal-header *) {
+#welcomeMessage {
+    font-size: 0.9rem !important;
+    color: black;
+}
+
+.modal *:not(.modal-header *) {
     font-size: 1rem !important;
 }
 
