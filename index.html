@@ -34,6 +34,7 @@
 
             <!-- Login - Sign up -->
             <div class="col-md-6 d-flex justify-content-end align-items-center gap-3 py-md-4">
+                <a href="favorite.html" id="favorBtn">Yêu thích</a>
                 <!-- LOGIN -->
 
                 <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#loginForm">
@@ -150,7 +151,7 @@
         <div class="row justify-content-center">
             <div class="col-md-5 col-12 text-center"> 
                 <button class="icon audio-btn" onclick="playSound()" alt="hehe"><i class="fa fa-volume-up speaker"></i></button>
-                <button class="icon" id="heart"><i class="fa-solid fa-heart"></i></button>
+                <button class="icon" id="heart" onclick="addFavor()"><i class="fa-solid fa-heart"></i></button>
                 <button class="icon"><i class="fa fa-share-alt"></i></button>
                 <button class="btn btn-success change-card" style="border: none">ĐỔI THẺ KHÁC</button>
             </div>
@@ -176,5 +177,6 @@
     <script src="./js/cardData.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/favor.js"></script>
 </body>
 </html>
