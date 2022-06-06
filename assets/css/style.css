@@ -16,13 +16,13 @@ body {
     background-size: cover;
 }
 
-#loginBtn, #signupBtn, #logoutBtn {
+#loginBtn, #signupBtn, #logoutBtn, #favorBtn {
     font-size: 0.9rem;
     color: green;
     text-decoration: underline;
 }
 
-#loginBtn:hover, #signupBtn:hover, #logoutBtn:hover {
+#loginBtn:hover, #signupBtn:hover, #logoutBtn:hover, #favorBtn:hover {
     color: black;
 }
 
@@ -320,3 +320,32 @@ body {
 .ldio-c3a83pepd0q div { 
     box-sizing: content-box; 
 }
+
+/* Trang Favorite*/
+
+div.list-card {
+    width: 750px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding-top: 10px;
+    background-color: rgb(207, 233, 183);
+    align-items: center;
+    /* justify-content: center; */
+  }
+  
+  #grid-cards{
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 20px;
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
+  
+  h3 {
+    font-weight: bold;
+    margin-top: 0px;
+  }
