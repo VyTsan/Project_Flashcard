@@ -18,6 +18,7 @@ function renderListCard() {
 
     if (favorWords.length === 0) {
         document.getElementById('list-card').style.display = 'none';
+        alert('Bạn chưa thêm từ yêu thích');
         return false;
     }
     document.getElementById('list-card').style.display = 'block';
