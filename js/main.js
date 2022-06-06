@@ -11,6 +11,16 @@ function resetCount() {
     for (let i = 0; i < cards.length; i++) markIndex[i] = 0;
 }
 
+function checkFavor(indexCard) {
+    let favorArr = localStorage.getItem('favorCardId') ? JSON.parse(localStorage.getItem('favorCardId')) : [];
+    if (favorArr.length > 0) 
+    {
+        for (let i = 0; i < favorArr.length; i++)
+            if (favorArr[i] === indexCard) return true;
+    }
+    return false;
+}
+
 function setImgURL(card, fileExtension = 'jpg') {
     let nameLink = card.nameEng.replace(' ', '_');
     card.imgURL = `./assets/images/${nameLink}.${fileExtension}`;
@@ -38,18 +48,18 @@ function showImg(card) {
     document.body.querySelector('.card__img-wrapper').appendChild(img);
 }
 
-function checkImg(card) {
-    console.log([cardImg]);
-    // console.log(cardImg.offsetHeight + 'px');
-    if (cardImg.offsetHeight === 0) 
-    {
-        // console.log(card);
-        // console.log(card.imgURL);
-        setImgURL(card, 'jpeg');
-        return false;
-    }
-    return true;
-}
+// function checkImg(card) {
+//     // console.log([cardImg]);
+//     // console.log(cardImg.offsetHeight + 'px');
+//     if (cardImg.offsetHeight === 0) 
+//     {
+//         // console.log(card);
+//         // console.log(card.imgURL);
+//         setImgURL(card, 'jpeg');
+//         return false;
+//     }
+//     return true;
+// }
 
 function showCard(indexCard) {
     let card = cards[indexCard];
@@ -62,6 +72,8 @@ function showCard(indexCard) {
 
     if (!card.audioURL) 
         document.querySelector('.audio-btn').classList.add('btn-disabled');
+    
+    if (checkFavor(indexCard)) heartEle.classList.add('liked');
     
     showImg(card);
     
@@ -78,6 +90,7 @@ function resetCard() {
     // cardImg.setAttribute('src', '');
     // cardImg.setAttribute('alt', '');
     document.querySelector('.card__img-wrapper').innerHTML = '';
+    heartEle.classList.remove('liked');
     phoneticEle.innerText = '';
     speakEle.setAttribute('src', '');
     document.querySelector('.audio-btn').classList.remove('btn-disabled');
@@ -136,34 +149,28 @@ function getCardsData(indexCard, resolve) {
         })
 }
 
-let countIndex = 0;
-let markIndex = [];
+let countIndex = 0, markIndex = [];
+var indexCard = 0;
 
 let start = new Promise(resolve => {
     for (let i = 0; i < cards.length; i++) 
         getCardsData(i, resolve);
 })
 
-start  
-    .then(() => {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                let loadingModal = document.querySelector('.loading__modal');
-                loadingModal.style.display = 'none';
-                resolve();
-            }, 1700);
-        })
-    })
+start
     .then(() => {
         // console.log(cards);
         resetCount();
-        let num = randNum();
+        indexCard = randNum();
         // console.log(num + 'index');
         countIndex++;
-        markIndex[num]++;
-        return num;
+        markIndex[indexCard]++;
+        return indexCard;
     })
     .then(numStart => {
+        // console.log(cards);
+        let loadingModal = document.querySelector('.loading__modal');
+        loadingModal.style.display = 'none';
         showCard(numStart);
     });
 
@@ -183,15 +190,16 @@ changeCardBtn.addEventListener('click', function() {
     resetCard();
     setTimeout(() => {
         loadingModal.style.display = 'none';
-    }, 300);
+    }, 200);
+
     setTimeout(() => {
 
-        let temp = randNum();
-        while (markIndex[temp]>=1) temp = randNum();
+        indexCard = randNum();
+        while (markIndex[indexCard]>=1) indexCard = randNum();
         // console.log(temp, "temp nà");
-        showCard(temp);
+        showCard(indexCard);
 
-        markIndex[temp]++;
+        markIndex[indexCard]++;
         countIndex++;
 
         if (countIndex === cards.length) resetCount();
