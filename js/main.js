@@ -34,7 +34,7 @@ function showImg(card) {
     img.onload = function() {
         if (this.width > 0) 
         {
-            console.log("img exists", img.src);
+            // console.log("img exists", img.src);
             img.alt = card.nameEng;
         }
     }

@@ -26,7 +26,7 @@ var user = 'bạn';
 
 
 let checkLoginStatus = localStorage.getItem('loggedIn');
-if (checkLoginStatus === null) {
+if (checkLoginStatus) {
   localStorage.setItem('loggedIn','false');
 } else {
   var loginStatus = JSON.parse(checkLoginStatus);
