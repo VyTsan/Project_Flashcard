@@ -17,8 +17,7 @@ function renderListCard() {
     let favorWords = localStorage.getItem('favorWords') ? JSON.parse(localStorage.getItem('favorWords')) : [];
 
     if (favorWords.length === 0) {
-        document.getElementById('list-card').style.display = 'none';
-        alert('Bạn chưa thêm từ yêu thích');
+        document.getElementById('grid-cards').innerText = 'Không có từ yêu thích nào.';
         return false;
     }
     document.getElementById('list-card').style.display = 'block';
