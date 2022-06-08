@@ -140,6 +140,7 @@ body {
 .change-card {
     transform: translateY(-8%);
     line-height: 2.5rem;
+    border: 1px solid white !important;
 }
 
 .liked {
