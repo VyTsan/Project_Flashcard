@@ -21,17 +21,11 @@
     <title>Animal Flashcards</title>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row header">
-            <div class="menu__icon-wrapper col-1 pt-md-4 pb-md-2 pt-3">
-                <i class="menu__icon fa-solid fa-bars"></i>
-            </div>
+    
+    <div class="container">
+        <div class="row">
             <!-- Title -->
-<<<<<<< HEAD
-            <div class="col-md-5 col-11 d-flex align-items-center justify-content-md-start justify-content-center pt-md-4 pb-md-2 pt-3">               
-=======
             <div class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-center pt-md-4 pt-3">               
->>>>>>> refs/remotes/origin/master
                 <div class="title">
                     <!-- <img src="https://see.fontimg.com/api/renderfont4/d9VDV/eyJyIjoiZnMiLCJoIjo2NCwidyI6MTI1MCwiZnMiOjUxLCJmZ2MiOiIjNTlDRDFBIiwiYmdjIjoiI0VBRTBFOCIsInQiOjF9/QW5pbWFscyBGbGFzaGNhcmRz/palmsprings-personal-use-regular.png" alt="title"> -->
                     <img src="https://see.fontimg.com/api/renderfont4/d9VDV/eyJyIjoiZnMiLCJoIjo2NCwidyI6MTI1MCwiZnMiOjUxLCJmZ2MiOiIjNTlDRDFBIiwiYmdjIjoiI0VBRTBFOCIsInQiOjF9/QW5pbWFscw/palmsprings-personal-use-regular.png" alt="title">
@@ -39,28 +33,20 @@
             </div>
 
             <!-- Login - Sign up -->
-<<<<<<< HEAD
-            <div class="col-md-6 d-flex justify-content-end align-items-center gap-3 py-md-4">
-=======
             <div class="col-md-6 d-flex justify-content-end align-items-center gap-3 pt-md-4">
->>>>>>> refs/remotes/origin/master
                 <!-- LOGIN -->
 
-                <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#loginForm">
+                <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#loginModal">
                 Đăng nhập
                 </button> -->
-<<<<<<< HEAD
-                <a href="#loginForm" data-bs-toggle="modal" data-bs-target="#loginForm" id="loginBtn">Đăng nhập</a>
-=======
                 <a class="tempBtn" href="#loginModal" data-bs-toggle="modal" data-bs-target="#loginModal" id="loginBtn">Đăng nhập</a>
->>>>>>> refs/remotes/origin/master
                 
-                <!-- Modal Form -->
-                <div class="modal fade" id="loginForm" tabindex="-1" aria-hidden="true">
+                <!-- Login Modal -->
+                <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <!-- Login Form -->
-                        <form action="">
+                        <form id="loginForm" action="">
                             <div class="modal-header">
                             <h5 class="modal-title">Đăng nhập</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -68,15 +54,15 @@
                             <div class="modal-body">
                             <div class="mb-3">
                                 <label for="Username">Email <span class="text-danger">*</span></label>
-                                <input type="email" name="username" class="form-control" id="Username" placeholder="Nhập email..." required>
+                                <input type="email" name="username" class="form-control" id="UsernameLogin" placeholder="Nhập email..." required>
                             </div>
                 
                             <div class="mb-3">
                                 <label for="Password">Mật khẩu <span class="text-danger">*</span></label>
-                                <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập mật khẩu..." required>
+                                <input type="password" name="password" class="form-control" id="PasswordLogin" placeholder="Nhập mật khẩu..." required>
                             </div>
                             <div class="mb-3">
-                                <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                                <input class="form-check-input" type="checkbox" value="" id="remember">
                                 <label class="form-check-label" for="remember">Nhớ mật khẩu</label>
                                 <a href="#" class="float-end">Quên mật khẩu?</a>
                             </div>
@@ -84,7 +70,7 @@
                             <div class="modal-footer pt-4">                  
                             <button type="button submit" class="btn btn-success mx-auto w-100 fontBtn">Đăng nhập</button>
                             </div>
-                            <p class="text-center log">Chưa có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#signupForm">Đăng ký</a></p> 
+                            <p class="text-center log">Chưa có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#signupModal">Đăng ký</a></p> 
                         </form>
                     </div>
                     </div>
@@ -92,21 +78,17 @@
 
                 <!-- SIGNUP -->
 
-                <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#signupForm">
+                <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#signupModal">
                     Đăng ký
                 </button> -->
-<<<<<<< HEAD
-                <a href="#signupForm" data-bs-toggle="modal" data-bs-target="#signupForm" id="signupBtn">Đăng ký</a>
-=======
                 <a class="tempBtn" href="#signupModal" data-bs-toggle="modal" data-bs-target="#signupModal" id="signupBtn">Đăng ký</a>
->>>>>>> refs/remotes/origin/master
                 
-                <!-- Modal Form -->
-                <div class="modal fade" id="signupForm" tabindex="-1" aria-hidden="true">
+                <!-- Signup Modal -->
+                <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                        <!-- Login Form -->
-                        <form action="">
+                        <!-- Signup Form -->
+                        <form id="signupForm" action="">
                             <div class="modal-header">
                             <h5 class="modal-title">Đăng ký</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -114,22 +96,22 @@
                             <div class="modal-body">
                             <div class="mb-3">
                                 <label for="Username">Email <span class="text-danger">*</span></label>
-                                <input type="email" name="username" class="form-control" id="Username" placeholder="Nhập email..." required>
+                                <input type="email" name="username" class="form-control" id="UsernameSignup" placeholder="Nhập email..." required>
                             </div>
                 
                             <div class="mb-3">
                                 <label for="Password">Mật khẩu <span class="text-danger">*</span></label>
-                                <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập mật khẩu..." required>
+                                <input type="password" name="password" class="form-control" id="PasswordSignup" placeholder="Nhập mật khẩu..." required>
                             </div>
                             <div class="mb-3">
                                 <label for="Password">Nhập lại mật khẩu <span class="text-danger">*</span></label>
-                                <input type="password" name="password" class="form-control" id="Password" placeholder="Nhập lại mật khẩu..." required>
+                                <input type="password" name="password" class="form-control" id="PasswordRepeat" placeholder="Nhập lại mật khẩu..." required>
                             </div>
                             </div>
                             <div class="modal-footer pt-4">                  
                             <button type="button submit" class="btn btn-success mx-auto w-100 fontBtn">Đăng ký</button>
                             </div>
-                            <p class="text-center log">Đã có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#loginForm">Đăng nhập</a></p> 
+                            <p class="text-center log">Đã có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#loginModal">Đăng nhập</a></p> 
                         </form>
                     </div>
                     </div>
@@ -204,109 +186,64 @@
             </div>
         </div>
     
-        <div class="row flex-nowrap body-wrapper">
-            <div class="col-auto d-flex flex-column justify-content-between sidebar full-sidebar">
-                <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                        <a href="" class="nav-link active">
-                            <i class="fa-solid fa-house"></i>
-                            <span class="nav-item__text">Trang chủ</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./favorite.html" class="nav-link">
-                            <i class="fa-solid fa-heart-circle-plus"></i>
-                            <span class="nav-item__text">Thẻ yêu thích</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <!-- <i class="fa-solid fa-circle-info"></i> -->
-                            <i class="fa-brands fa-facebook"></i>
-                            <span class="nav-item__text">Liên hệ</span>
-                        </a>
-                    </li>
-                    <li class="nav-item nav-link d-flex justify-content-center" title="Đổi theme">
-                        <input type="checkbox" id="theme__checkbox">
-                        <label for="theme__checkbox" class="theme__bar">
-                            <i class="text-primary fa-solid fa-fish-fins"></i>
-                            <i class="text-success fa-solid fa-mountain-sun"></i>
-                            <div class="ball"></div>
-                        </label>
-                    </li>
-                </ul>
-
-                <div class="copyright text-center">
-                    <p class="mb-1">2022 June 8 - "Thỏ chiến" team</p>
-                </div>
-            </div>
-            <div class="col">
-                <!-- Card -->
-                <div class="row p-2 justify-content-center main-row">              
-                    <div class="col-md-6 col-12">  
-                        <div class="scene scene--card">
-                            <div class="card">
-                                <div class="card__face card__face--front">
-                                    <div class="name"></div>
-                                    <div class="phonetic"></div>
+        <!-- Card -->
+        <div class="row p-2 justify-content-center main-row">              
+            <div class="col-md-6 col-12">  
+                <div class="scene scene--card">
+                    <div class="card">
+                        <div class="card__face card__face--front">
+                            <div class="name"></div>
+                            <div class="phonetic"></div>
+                        </div>
+                        <div class="card__face card__face--back">
+                            <div class="row">
+                                <div class="col-5 name-vie">
+                                    <span class="text"></span>
                                 </div>
-                                <div class="card__face card__face--back">
-                                    <div class="row">
-                                        <div class="col-5 name-vie">
-                                            <span class="text"></span>
-                                        </div>
-                                        <div class="offset-1 col-6 card__img-wrapper">
-                                            <!-- <img class="card__img img-fluid" src="" alt=""/> -->
-                                        </div>
-                                    </div>
+                                <div class="offset-1 col-6 card__img-wrapper">
+                                    <!-- <img class="card__img img-fluid" src="" alt=""/> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="row justify-content-center">
-                    <div class="col-md-4 col-12">   
-                        <div class="instruction"><i class="fa fa-hand-o-up"></i>Nhấn vào thẻ để lật lại<i class="fa fa-hand-o-up"></i></div>
+            </div>
+        </div>
+        <!-- <div class="row justify-content-center">
+            <div class="col-md-4 col-12">   
+                <div class="instruction"><i class="fa fa-hand-o-up"></i>Nhấn vào thẻ để lật lại<i class="fa fa-hand-o-up"></i></div>
+            </div>
+        </div> -->
+        <div class="row justify-content-center">
+            <div class="col-md-5 col-12 text-center"> 
+                <button class="icon audio-btn" onclick="playSound()" alt="hehe"><i class="fa fa-volume-up speaker"></i></button>
+                <button class="icon" id="heart" onclick="addFavor()"><i class="fa-solid fa-heart"></i></button>
+                <button class="icon"><i class="fa fa-share-alt"></i></button>
+                <button class="btn btn-success change-card fontBtn" style="border: none">ĐỔI THẺ KHÁC</button>
+            </div>
+        </div>
+        <audio src="" id="speak"></audio>
+        <div class="loading__modal">
+            <div class="loadingio-spinner-double-ring">
+                <div class="ldio-c3a83pepd0q">
+                    <div></div>
+                    <div></div>
+                    <div>
+                        <div></div>
                     </div>
-                </div> -->
-                <div class="row justify-content-center">
-                    <div class="col-md-5 col-12 text-center"> 
-                        <button class="icon audio-btn" onclick="playSound()" alt="hehe">
-                            <audio src="" id="speak"></audio>
-                            <i class="fa fa-volume-up speaker"></i>
-                        </button>
-                        <button class="icon" id="heart"><i class="fa-solid fa-heart"></i></button>
-                        <button class="icon"><i class="fa fa-share-alt"></i></button>
-                        <button class="btn btn-success change-card" style="border: none">ĐỔI THẺ KHÁC</button>
+                    <div>
+                        <div></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <div class="loading__modal">
-        <div class="loadingio-spinner-double-ring">
-            <div class="ldio-c3a83pepd0q">
-                <div></div>
-                <div></div>
-                <div>
-                    <div></div>
-                </div>
-                <div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./js/cardData.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/main.js"></script>
-<<<<<<< HEAD
-=======
     <script src="./js/favor.js"></script>
     <script src="./js/changeTheme.js"></script>
->>>>>>> refs/remotes/origin/master
 </body>
 </html>
