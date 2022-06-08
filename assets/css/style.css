@@ -17,20 +17,30 @@ body {
     background-size: cover;
 }
 
+<<<<<<< HEAD
 #loginBtn,
 #signupBtn,
 #logoutBtn,
 #favorBtn {
+=======
+#loginBtn, #signupBtn, #logoutBtn, #favorBtn, #changeThemeBtn {
+>>>>>>> refs/remotes/origin/master
     font-size: 0.9rem;
-    color: green;
+    color: black;
+    cursor: pointer;
     text-decoration: underline;
 }
 
+<<<<<<< HEAD
 #loginBtn:hover,
 #signupBtn:hover,
 #logoutBtn:hover,
 #favorBtn:hover {
     color: black;
+=======
+#loginBtn:hover, #signupBtn:hover, #logoutBtn:hover, #favorBtn:hover, #changeThemeBtn:hover {
+    color: white;
+>>>>>>> refs/remotes/origin/master
 }
 
 #welcomeMessage {
@@ -43,7 +53,7 @@ body {
 }
 
 .main-row {
-    margin-top: 4rem;
+    margin-top: 3.2rem;
 }
 
 .scene {
@@ -146,6 +156,7 @@ body {
 .change-card {
     transform: translateY(-8%);
     line-height: 2.5rem;
+    border: 1px solid white !important;
 }
 
 .liked {
@@ -336,10 +347,7 @@ div.list-card {
     width: 750px;
     border-radius: 10px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-    padding-top: 10px;
+    padding: 10px 0 0 0 !important;
     background-color: rgb(207, 233, 183);
     align-items: center;
     /* justify-content: center; */

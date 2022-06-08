@@ -27,7 +27,11 @@
                 <i class="menu__icon fa-solid fa-bars"></i>
             </div>
             <!-- Title -->
+<<<<<<< HEAD
             <div class="col-md-5 col-11 d-flex align-items-center justify-content-md-start justify-content-center pt-md-4 pb-md-2 pt-3">               
+=======
+            <div class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-center pt-md-4 pt-3">               
+>>>>>>> refs/remotes/origin/master
                 <div class="title">
                     <!-- <img src="https://see.fontimg.com/api/renderfont4/d9VDV/eyJyIjoiZnMiLCJoIjo2NCwidyI6MTI1MCwiZnMiOjUxLCJmZ2MiOiIjNTlDRDFBIiwiYmdjIjoiI0VBRTBFOCIsInQiOjF9/QW5pbWFscyBGbGFzaGNhcmRz/palmsprings-personal-use-regular.png" alt="title"> -->
                     <img src="https://see.fontimg.com/api/renderfont4/d9VDV/eyJyIjoiZnMiLCJoIjo2NCwidyI6MTI1MCwiZnMiOjUxLCJmZ2MiOiIjNTlDRDFBIiwiYmdjIjoiI0VBRTBFOCIsInQiOjF9/QW5pbWFscw/palmsprings-personal-use-regular.png" alt="title">
@@ -35,13 +39,21 @@
             </div>
 
             <!-- Login - Sign up -->
+<<<<<<< HEAD
             <div class="col-md-6 d-flex justify-content-end align-items-center gap-3 py-md-4">
+=======
+            <div class="col-md-6 d-flex justify-content-end align-items-center gap-3 pt-md-4">
+>>>>>>> refs/remotes/origin/master
                 <!-- LOGIN -->
 
                 <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#loginForm">
                 Đăng nhập
                 </button> -->
+<<<<<<< HEAD
                 <a href="#loginForm" data-bs-toggle="modal" data-bs-target="#loginForm" id="loginBtn">Đăng nhập</a>
+=======
+                <a class="tempBtn" href="#loginModal" data-bs-toggle="modal" data-bs-target="#loginModal" id="loginBtn">Đăng nhập</a>
+>>>>>>> refs/remotes/origin/master
                 
                 <!-- Modal Form -->
                 <div class="modal fade" id="loginForm" tabindex="-1" aria-hidden="true">
@@ -70,7 +82,7 @@
                             </div>
                             </div>
                             <div class="modal-footer pt-4">                  
-                            <button type="button submit" class="btn btn-success mx-auto w-100">Đăng nhập</button>
+                            <button type="button submit" class="btn btn-success mx-auto w-100 fontBtn">Đăng nhập</button>
                             </div>
                             <p class="text-center log">Chưa có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#signupForm">Đăng ký</a></p> 
                         </form>
@@ -83,7 +95,11 @@
                 <!-- <button type="button" class="btn btn-success loginBtn" data-bs-toggle="modal" data-bs-target="#signupForm">
                     Đăng ký
                 </button> -->
+<<<<<<< HEAD
                 <a href="#signupForm" data-bs-toggle="modal" data-bs-target="#signupForm" id="signupBtn">Đăng ký</a>
+=======
+                <a class="tempBtn" href="#signupModal" data-bs-toggle="modal" data-bs-target="#signupModal" id="signupBtn">Đăng ký</a>
+>>>>>>> refs/remotes/origin/master
                 
                 <!-- Modal Form -->
                 <div class="modal fade" id="signupForm" tabindex="-1" aria-hidden="true">
@@ -111,13 +127,80 @@
                             </div>
                             </div>
                             <div class="modal-footer pt-4">                  
-                            <button type="button submit" class="btn btn-success mx-auto w-100">Đăng ký</button>
+                            <button type="button submit" class="btn btn-success mx-auto w-100 fontBtn">Đăng ký</button>
                             </div>
                             <p class="text-center log">Đã có tài khoản? <a data-bs-dismiss="modal" data-bs-toggle="modal" href="#loginForm">Đăng nhập</a></p> 
                         </form>
                     </div>
                     </div>
                 </div>
+
+                <!-- Success Modal -->
+                <div class="modal" id="successModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                  
+                        <div class="modal-header">
+                          <h4 class="modal-title">Thành công!</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                  
+                        <div class="modal-body">
+                          Đăng nhập/Đăng ký thành công.
+                        </div>
+                  
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-success fontBtn" data-bs-dismiss="modal">Đóng</button>
+                        </div>
+                  
+                      </div>
+                    </div>
+                </div>
+
+                <!-- Fail Modal -->
+                <div class="modal fade" id="failModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                  
+                        <div class="modal-header">
+                          <h4 class="modal-title">Thất bại!</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                  
+                        <div id="failMessage" class="modal-body"></div>
+                  
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                        </div>
+                  
+                      </div>
+                    </div>
+                </div>
+
+                <!-- LOGOUT -->
+                <div id="welcomeMessage" class="fst-italic">Xin chào</div>
+                <a class="tempBtn" href="#logoutModal" data-bs-toggle="modal" data-bs-target="#logoutModal" id="logoutBtn">Đăng xuất</a>
+                <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Đăng xuất</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Bạn chắc chắn muốn đăng xuất?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-success fontBtn" id="logoutConfirmBtn" data-bs-dismiss="modal">Đăng xuất</button>
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-end gap-3">
+                <a class="tempBtn" href="favorite.html" id="favorBtn">Thẻ yêu thích</a>
+                <span class="tempBtn" id="changeThemeBtn">Đổi theme</span>
             </div>
         </div>
     
@@ -181,9 +264,35 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <!-- <div class="row justify-content-center">
                     <div class="col-md-4 col-12">   
                         <div class="instruction"><i class="fa fa-hand-o-up"></i>Nhấn vào thẻ để lật lại<i class="fa fa-hand-o-up"></i></div>
+=======
+            </div>
+        </div>
+        <!-- <div class="row justify-content-center">
+            <div class="col-md-4 col-12">   
+                <div class="instruction"><i class="fa fa-hand-o-up"></i>Nhấn vào thẻ để lật lại<i class="fa fa-hand-o-up"></i></div>
+            </div>
+        </div> -->
+        <div class="row justify-content-center">
+            <div class="col-md-5 col-12 text-center"> 
+                <button class="icon audio-btn" onclick="playSound()" alt="hehe"><i class="fa fa-volume-up speaker"></i></button>
+                <button class="icon" id="heart" onclick="addFavor()"><i class="fa-solid fa-heart"></i></button>
+                <button class="icon"><i class="fa fa-share-alt"></i></button>
+                <button class="btn btn-success change-card fontBtn" style="border: none">ĐỔI THẺ KHÁC</button>
+            </div>
+        </div>
+        <audio src="" id="speak"></audio>
+        <div class="loading__modal">
+            <div class="loadingio-spinner-double-ring">
+                <div class="ldio-c3a83pepd0q">
+                    <div></div>
+                    <div></div>
+                    <div>
+                        <div></div>
+>>>>>>> refs/remotes/origin/master
                     </div>
                 </div> -->
                 <div class="row justify-content-center">
@@ -220,5 +329,10 @@
     <script src="./js/cardData.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/main.js"></script>
+<<<<<<< HEAD
+=======
+    <script src="./js/favor.js"></script>
+    <script src="./js/changeTheme.js"></script>
+>>>>>>> refs/remotes/origin/master
 </body>
 </html>

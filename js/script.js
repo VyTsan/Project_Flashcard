@@ -7,6 +7,7 @@ cardEle.addEventListener('click', () => {
 
 heartEle.addEventListener('click', () => {
   heartEle.classList.toggle('liked');
+<<<<<<< HEAD
 })
 
 const headerEle = document.querySelector('.header');
@@ -18,3 +19,6 @@ sidebarEle.style.height = `calc(100vh - ${headerHeight})`;
 console.log(sidebarEle);
 
 
+=======
+})
+>>>>>>> refs/remotes/origin/master
