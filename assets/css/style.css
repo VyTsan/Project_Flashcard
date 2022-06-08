@@ -16,13 +16,14 @@ body {
     background-size: cover;
 }
 
-#loginBtn, #signupBtn, #logoutBtn, #favorBtn {
+#loginBtn, #signupBtn, #logoutBtn, #favorBtn, #changeThemeBtn {
     font-size: 0.9rem;
     color: green;
+    cursor: pointer;
     text-decoration: underline;
 }
 
-#loginBtn:hover, #signupBtn:hover, #logoutBtn:hover, #favorBtn:hover {
+#loginBtn:hover, #signupBtn:hover, #logoutBtn:hover, #favorBtn:hover, #changeThemeBtn:hover {
     color: black;
 }
 
