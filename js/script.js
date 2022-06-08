@@ -157,4 +157,3 @@ cardEle.addEventListener('click', () => {
 heartEle.addEventListener('click', () => {
   heartEle.classList.toggle('liked');
 })
-

@@ -18,13 +18,13 @@ body {
 
 #loginBtn, #signupBtn, #logoutBtn, #favorBtn, #changeThemeBtn {
     font-size: 0.9rem;
-    color: green;
+    color: black;
     cursor: pointer;
     text-decoration: underline;
 }
 
 #loginBtn:hover, #signupBtn:hover, #logoutBtn:hover, #favorBtn:hover, #changeThemeBtn:hover {
-    color: black;
+    color: white;
 }
 
 #welcomeMessage {
@@ -37,7 +37,7 @@ body {
 }
 
 .main-row {
-    margin-top: 4rem;
+    margin-top: 3.2rem;
 }
 
 .scene {
