@@ -12,11 +12,12 @@ function resetCount() {
 }
 
 function checkFavor(indexCard) {
-    let favorArr = localStorage.getItem('favorCardId') ? JSON.parse(localStorage.getItem('favorCardId')) : [];
+    let card = cards[indexCard];
+    let favorArr = localStorage.getItem('favorWords') ? JSON.parse(localStorage.getItem('favorWords')) : [];
     if (favorArr.length > 0) 
     {
         for (let i = 0; i < favorArr.length; i++)
-            if (favorArr[i] === indexCard) return true;
+            if (favorArr[i].cardNameEng === card.nameEng) return true;
     }
     return false;
 }
