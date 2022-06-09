@@ -1,14 +1,31 @@
 /* Add favorite*/
 
-function addFavor() {
+function handleFavor() {
     let favorWords = localStorage.getItem('favorWords') ? JSON.parse(localStorage.getItem('favorWords')) : [];
+    console.log(favorWords);
+    if (favorWords.length > 0) 
+    {
+        for (let i = 0; i < favorWords.length; i++)
+        {
+            if (cardNameEng.innerText === favorWords[i].cardNameEng) 
+            {
+                deleteCard(i);
+                return 0;
+            }
+        }
+        addFavor(favorWords);
+    }
+    else addFavor(favorWords);
+}
 
-        favorWords.push({
-            cardNameEng: cardNameEng.innerText,
-            cardNameVie: cardNameVie.innerText,
-        });
+function addFavor(favorWords) {
+    console.log(favorWords);
+    favorWords.push({
+        cardNameEng: cardNameEng.innerText,
+        cardNameVie: cardNameVie.innerText,
+    });
 
-        localStorage.setItem('favorWords', JSON.stringify(favorWords));
+    localStorage.setItem('favorWords', JSON.stringify(favorWords));
 }
 
 // Hiện danh sách từ yêu thích
@@ -57,5 +74,3 @@ function deleteCard(id){
     localStorage.setItem('favorWords', JSON.stringify(favorWords));
     renderListCard();
 }
-
-theme = localStorage.getItem('last-theme') ? JSON.parse(localStorage.getItem('last-theme')) : 1;
