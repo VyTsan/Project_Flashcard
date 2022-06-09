@@ -172,6 +172,9 @@ start
         let loadingModal = document.querySelector('.loading__modal');
         loadingModal.style.display = 'none';
         showCard(numStart);
+    })
+    .then(() => {
+            showTheme(theme);
     });
 
 
