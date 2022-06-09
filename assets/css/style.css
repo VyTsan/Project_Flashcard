@@ -141,6 +141,7 @@ body {
     transform: translateY(-8%);
     line-height: 2.5rem;
     border: 1px solid white !important;
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.7);
 }
 
 .liked {
