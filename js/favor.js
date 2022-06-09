@@ -57,3 +57,6 @@ function deleteCard(id){
     localStorage.setItem('favorWords', JSON.stringify(favorWords));
     renderListCard();
 }
+
+theme = localStorage.getItem('last-theme') ? JSON.parse(localStorage.getItem('last-theme')) : 1;
+showTheme(theme);

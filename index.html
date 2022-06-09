@@ -23,12 +23,12 @@
 <body>
     
     <div class="container">
-        <div class="row">
+        <div class="row header">
             <!-- Title -->
-            <div class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-center pt-md-4 pt-3">               
+            <div class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-center pt-md-4 pb-md-2 pt-3">               
                 <div class="title">
                     <!-- <img src="https://see.fontimg.com/api/renderfont4/d9VDV/eyJyIjoiZnMiLCJoIjo2NCwidyI6MTI1MCwiZnMiOjUxLCJmZ2MiOiIjNTlDRDFBIiwiYmdjIjoiI0VBRTBFOCIsInQiOjF9/QW5pbWFscyBGbGFzaGNhcmRz/palmsprings-personal-use-regular.png" alt="title"> -->
-                    <img src="https://see.fontimg.com/api/renderfont4/d9VDV/eyJyIjoiZnMiLCJoIjo2NCwidyI6MTI1MCwiZnMiOjUxLCJmZ2MiOiIjNTlDRDFBIiwiYmdjIjoiI0VBRTBFOCIsInQiOjF9/QW5pbWFscw/palmsprings-personal-use-regular.png" alt="title">
+                    <!-- <img src="https://see.fontimg.com/api/renderfont4/d9VDV/eyJyIjoiZnMiLCJoIjo2NCwidyI6MTI1MCwiZnMiOjUxLCJmZ2MiOiIjNTlDRDFBIiwiYmdjIjoiI0VBRTBFOCIsInQiOjF9/QW5pbWFscw/palmsprings-personal-use-regular.png" alt="title"> -->
                 </div>
             </div>
 
@@ -180,60 +180,108 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-end gap-3">
-                <a class="tempBtn" href="favorite.html" id="favorBtn">Thẻ yêu thích</a>
-                <span class="tempBtn" id="changeThemeBtn">Đổi theme</span>
-            </div>
         </div>
+    </div>
     
-        <!-- Card -->
-        <div class="row p-2 justify-content-center main-row">              
-            <div class="col-md-6 col-12">  
-                <div class="scene scene--card">
-                    <div class="card">
-                        <div class="card__face card__face--front">
-                            <div class="name"></div>
-                            <div class="phonetic"></div>
+    <div class="container-fluid">
+        <div class="row flex-nowrap body-wrapper">
+
+            <!-- Sidebar -->
+            <div class="col-auto d-flex flex-column justify-content-between sidebar full-sidebar">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="nav-item__text">Trang chủ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./favorite.html" class="nav-link">
+                            <i class="fa-solid fa-heart-circle-plus"></i>
+                            <span class="nav-item__text">Thẻ yêu thích</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.facebook.com/khoimapp" target="_blank" class="nav-link">
+                            <!-- <i class="fa-solid fa-circle-info"></i> -->
+                            <i class="fa-brands fa-facebook"></i>
+                            <span class="nav-item__text">Liên hệ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-link d-flex justify-content-center" title="Đổi theme">
+                        <div class="theme__bar">
+                            <i class="text-primary fa-solid fa-fish-fins"></i>
+                            <i class="text-success fa-solid fa-mountain-sun"></i>
+                            <div class="ball"></div>
                         </div>
-                        <div class="card__face card__face--back">
-                            <div class="row">
-                                <div class="col-5 name-vie">
-                                    <span class="text"></span>
+                    </li>
+                </ul>
+
+                <div class="copyright text-center">
+                    <p class="mb-1">2022 May - "Thỏ chiến" team</p>
+                </div>
+
+                <div class="sidebar__change-size-btn d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                    <!-- <i class="fa-solid fa-arrow-right-long"></i> -->
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="col">
+                <!-- Card -->
+                <div class="row p-2 justify-content-center main-row">              
+                    <div class="col-md-6 col-12">  
+                        <div class="scene scene--card">
+                            <div class="card">
+                                <div class="card__face card__face--front">
+                                    <div class="name"></div>
+                                    <div class="phonetic"></div>
                                 </div>
-                                <div class="offset-1 col-6 card__img-wrapper">
-                                    <!-- <img class="card__img img-fluid" src="" alt=""/> -->
+                                <div class="card__face card__face--back">
+                                    <div class="row">
+                                        <div class="col-5 name-vie">
+                                            <span class="text"></span>
+                                        </div>
+                                        <div class="offset-1 col-6 card__img-wrapper">
+                                            <!-- <img class="card__img img-fluid" src="" alt=""/> -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- <div class="row justify-content-center">
+                    <div class="col-md-4 col-12">   
+                        <div class="instruction"><i class="fa fa-hand-o-up"></i>Nhấn vào thẻ để lật lại<i class="fa fa-hand-o-up"></i></div>
+                    </div>
+                </div> -->
+                <div class="row justify-content-center">
+                    <div class="col-md-5 col-12 text-center"> 
+                        <button class="icon audio-btn" onclick="playSound()" alt="Có lỗi!">
+                            <i class="fa fa-volume-up speaker"></i>
+                            <audio src="" id="speak"></audio>
+                        </button>
+                        <button class="icon" id="heart" onclick="addFavor()"><i class="fa-solid fa-heart"></i></button>
+                        <button class="icon"><i class="fa fa-share-alt"></i></button>
+                        <button class="btn btn-success change-card fontBtn" style="border: none">ĐỔI THẺ KHÁC</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- <div class="row justify-content-center">
-            <div class="col-md-4 col-12">   
-                <div class="instruction"><i class="fa fa-hand-o-up"></i>Nhấn vào thẻ để lật lại<i class="fa fa-hand-o-up"></i></div>
-            </div>
-        </div> -->
-        <div class="row justify-content-center">
-            <div class="col-md-5 col-12 text-center"> 
-                <button class="icon audio-btn" onclick="playSound()" alt="hehe"><i class="fa fa-volume-up speaker"></i></button>
-                <button class="icon" id="heart" onclick="addFavor()"><i class="fa-solid fa-heart"></i></button>
-                <button class="icon"><i class="fa fa-share-alt"></i></button>
-                <button class="btn btn-success change-card fontBtn" style="border: none">ĐỔI THẺ KHÁC</button>
-            </div>
-        </div>
-        <audio src="" id="speak"></audio>
-        <div class="loading__modal">
-            <div class="loadingio-spinner-double-ring">
-                <div class="ldio-c3a83pepd0q">
+    </div>
+
+    <div class="loading__modal">
+        <div class="loadingio-spinner-double-ring">
+            <div class="ldio-c3a83pepd0q">
+                <div></div>
+                <div></div>
+                <div>
                     <div></div>
+                </div>
+                <div>
                     <div></div>
-                    <div>
-                        <div></div>
-                    </div>
-                    <div>
-                        <div></div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -242,8 +290,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./js/cardData.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/changeTheme.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/favor.js"></script>
-    <script src="./js/changeTheme.js"></script>
 </body>
 </html>
