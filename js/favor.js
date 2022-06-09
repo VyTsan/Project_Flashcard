@@ -59,4 +59,3 @@ function deleteCard(id){
 }
 
 theme = localStorage.getItem('last-theme') ? JSON.parse(localStorage.getItem('last-theme')) : 1;
-showTheme(theme);
