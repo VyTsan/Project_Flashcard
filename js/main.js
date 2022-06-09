@@ -174,7 +174,7 @@ start
         showCard(numStart);
     })
     .then(() => {
-            showTheme(theme);
+        showTheme(theme);
     });
 
 
