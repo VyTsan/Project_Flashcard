@@ -159,6 +159,22 @@ body {
     grid-template-rows: 1.5fr repeat(3, 1fr); */
 }
 
+.sidebar-mountain {
+    background-color: rgba(207 233 183 / 78%);
+}
+
+.sidebar-mountain .nav-link {
+    color: #111;
+}
+
+.sidebar-mountain .active {
+    background-color: green !important;
+}
+
+.sidebar-sea {
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
 .btn-disabled {
     opacity: 0.2;
     user-select: none;
