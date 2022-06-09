@@ -22,6 +22,7 @@ function showTheme(theme) {
         });
         themeBar.setAttribute('style', 'background-color: #40E0D0');
         themeBall.setAttribute('style', 'transform: translateX(34px)');
+        sidebarEle.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
     } else {
         titleEle.innerHTML = `<img src="https://see.fontimg.com/api/renderfont4/d9VDV/eyJyIjoiZnMiLCJoIjo2NCwidyI6MTI1MCwiZnMiOjUxLCJmZ2MiOiIjNTlDRDFBIiwiYmdjIjoiI0VBRTBFOCIsInQiOjF9/QW5pbWFscw/palmsprings-personal-use-regular.png" alt="title">`;
         bodyEle.style.backgroundImage = `url("https://wallpaperaccess.com/full/3665287.jpg")`;
@@ -34,6 +35,7 @@ function showTheme(theme) {
         });
         themeBar.setAttribute('style', '');
         themeBall.setAttribute('style', '');
+        sidebarEle.style.backgroundColor = "rgba(207 233 183 / 80%)";
     }
     setTimeout(() => {
         headerHeight = headerEle.offsetHeight + "px";
