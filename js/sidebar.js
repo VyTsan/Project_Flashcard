@@ -18,3 +18,4 @@ changeSize.onclick = function () {
     }
     // console.log(iconEle);
 };
+showTheme(theme);
